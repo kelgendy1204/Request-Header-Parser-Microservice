@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "scripts": {
+    "build": "node app.js",
+    "start": "nodemon app.js"
+  },
+  "name": "express",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/kelgendy1204/Request-Header-Parser-Microservice.git",
+  "author": "Khaled <elgendy1204@gmail.com>",
+  "license": "MIT"
+}

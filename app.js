@@ -1,13 +1,15 @@
 const express = require('express');
 const app = express();
+const requestIp = require('request-ip');
+
+app.use(requestIp.mw());
 
 app.get('/', (req, res) => {
     res.redirect('/api/whoami');
 });
 
-
 app.get('/api/whoami', (req, res) => {
-    var ipaddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ipaddress = req.clientIp;
     const data = {
         ipaddress
     };
